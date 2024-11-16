@@ -11,5 +11,4 @@ int createrandom(int min, int max)
 	return random;
 }
 
-
 #endif

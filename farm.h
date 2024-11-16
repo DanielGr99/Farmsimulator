@@ -13,8 +13,12 @@ public:
 	void raisemaxanimals(unsigned int a) { maxanimals += a; }
 	//Maximale Tiere vermindern
 	void reducemaxanimals(unsigned int a) { maxanimals -= a; }
+	//Tiere auf der Farm
+	void setanimals(unsigned int i) { animals = i; }
 	//Tiere auf der Farm anzeigen
 	unsigned int getanimals() { return animals; }
+	//Maximale Tierkapazität anzeigen
+	unsigned int getmaxanimals() { return maxanimals; }
 };
 
 #endif
