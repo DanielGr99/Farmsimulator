@@ -1,17 +1,17 @@
 #ifndef _money_
 #define _money_
 
-class money
+class Money
 {
 private:
-	long nmoney;						//Menge des Geldes
+	long nMoney;						//Menge des Geldes
 
 public:
 	//Konstruktor
-	money(long nmon) { nmoney = nmon; }
-	void raisemoney(long a) { nmoney += a; }				//Menge des Geldes erhöhen
-	void reducemoney(long a) { nmoney -= a; }				//Menge des Geldes vermindern
-	long getmoney() { return nmoney; }						//Menge des Geldes anzeigen
+	Money(long nmon) { nMoney = nmon; }
+	void raiseMoney(long a) { nMoney += a; }				//Menge des Geldes erhöhen
+	void reduceMoney(long a) { nMoney -= a; }				//Menge des Geldes vermindern
+	long getMoney() const { return nMoney; }						//Menge des Geldes anzeigen
 };
 
 #endif

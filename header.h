@@ -4,7 +4,7 @@
 #include <ctime>
 #include <cstdlib>
 
-int createrandom(int min, int max)
+int createRandom(int min, int max)
 {
 	srand((unsigned int)time(NULL));
 	int random = min + rand() % max;

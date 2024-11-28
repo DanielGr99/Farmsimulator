@@ -1,29 +1,29 @@
 #ifndef _animal_
 #define _animal_
 
-class animal
+class Animal
 {
 private:
 	//Anzahl der Tiere
-	unsigned int nanimal;	
+	unsigned int nAnimal;	
 	//Nach wievielen Tagen ein Tier stirbt
 	unsigned int deathday;			
 	//Vermehrungsrate des Tieres
 	unsigned int reproduction;		
 	//Preis des Tieres
-	long pricebuy;
+	long priceBuy;
 	//Verkaufspreis des Tieres
-	long pricesell;
+	long priceSell;
 public:
 	//Konstruktor
-	animal(unsigned int nnimal, unsigned int dday, unsigned int reprod, unsigned int priceb, unsigned int prices) { nanimal = nnimal; deathday = dday; reproduction = reprod; pricebuy = priceb; pricesell = prices; }
+	Animal(unsigned int nnimal, unsigned int dday, unsigned int reprod, unsigned int priceb, unsigned int prices) { nAnimal = nnimal; deathday = dday; reproduction = reprod; priceBuy = priceb; priceSell = prices; }
 	// Tiere hinzufügen
-	void setnanimal(int n) { nanimal += n; }
-	unsigned int getanimal() { return nanimal; }
-	unsigned int getdeathday() { return deathday; }
-	unsigned int getreproduction() { return reproduction; }
-	long getpricebuy() { return pricebuy; }
-	long getpricesell() { return pricesell; }
+	void setnAnimal(int n) { nAnimal += n; }
+	unsigned int getAnimal() const { return nAnimal; }
+	unsigned int getDeathday() const { return deathday; }
+	unsigned int getReproduction() const { return reproduction; }
+	long getPriceBuy() const { return priceBuy; }
+	long getPriceSell() const { return priceSell; }
 	unsigned int reproduce(unsigned int animals, unsigned int maxanimals);
 	unsigned int death();
 };

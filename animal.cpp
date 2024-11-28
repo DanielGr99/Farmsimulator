@@ -1,15 +1,15 @@
 #include "animal.h"
 #include "header.h"
 
-unsigned int animal::reproduce(unsigned int animals,unsigned int maxanimals)
+unsigned int Animal::reproduce(unsigned int animals,unsigned int maxAnimals)
 {
-	if (nanimal >= 2)
+	if (nAnimal >= 2)
 	{
-		unsigned int remaining = nanimal % 4;		//Der Rest der nachher abgezogen wird um einen Fehler zu vermeiden
-		unsigned int i = createrandom(0, ((nanimal-remaining) / 4 * reproduction));
-		if (maxanimals>=animals+i)
+		unsigned int remaining = nAnimal % 4;		//Der Rest der nachher abgezogen wird um einen Fehler zu vermeiden
+		unsigned int i = createRandom(0, ((nAnimal-remaining) / 4 * reproduction));
+		if (maxAnimals>=animals+i)
 		{
-			nanimal += i;
+			nAnimal += i;
 			return i;
 		}
 		else
@@ -18,13 +18,13 @@ unsigned int animal::reproduce(unsigned int animals,unsigned int maxanimals)
 	else
 		return 0;
 }
-unsigned int animal::death()
+unsigned int Animal::death()
 {
-	if (nanimal >= deathday)
+	if (nAnimal >= deathday)
 	{
-		unsigned int remaining = nanimal % deathday;	//Der Rest der nachher abgezogen wird um einen Fehler zu vermeiden
-		unsigned int i = createrandom(0, ((nanimal-remaining) / deathday));
-		nanimal -= i;
+		unsigned int remaining = nAnimal % deathday;	//Der Rest der nachher abgezogen wird um einen Fehler zu vermeiden
+		unsigned int i = createRandom(0, ((nAnimal-remaining) / deathday));
+		nAnimal -= i;
 		return i;
 	}
 	else

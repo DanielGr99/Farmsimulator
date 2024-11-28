@@ -1,24 +1,24 @@
 #ifndef _farm_
 #define _farm_
 
-class farm
+class Farm
 {
 private:
-	unsigned int maxanimals;				//max. Anzahl an Tieren die Platz haben
+	unsigned int maxAnimals;				//max. Anzahl an Tieren die Platz haben
 	unsigned int animals;					//Anzahl der Tiere auf dem Bauernhof
 public:
 	//Konstruktor
-	farm(unsigned int manimals, unsigned int nanimals) { maxanimals = manimals; animals = nanimals; }
+	Farm(unsigned int manimals, unsigned int nanimals) { maxAnimals = manimals; animals = nanimals; }
 	//Maximale Tiere erhöhen
-	void raisemaxanimals(unsigned int a) { maxanimals += a; }
+	void raiseMaxAnimals(unsigned int a) { maxAnimals += a; }
 	//Maximale Tiere vermindern
-	void reducemaxanimals(unsigned int a) { maxanimals -= a; }
+	void reduceMaxAnimals(unsigned int a) { maxAnimals -= a; }
 	//Tiere auf der Farm
-	void setanimals(unsigned int i) { animals = i; }
+	void setAnimals(unsigned int i) { animals = i; }
 	//Tiere auf der Farm anzeigen
-	unsigned int getanimals() { return animals; }
+	unsigned int getAnimals() const { return animals; }
 	//Maximale Tierkapazität anzeigen
-	unsigned int getmaxanimals() { return maxanimals; }
+	unsigned int getMaxAnimals() const { return maxAnimals; }
 };
 
 #endif
